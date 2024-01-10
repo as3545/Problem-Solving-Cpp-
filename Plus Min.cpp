@@ -52,26 +52,24 @@ Sample Output
 
 //Code
 
- int n;
-  cin >> n;
-  int setprecision=6;
-  int positive = 0;
-  int negative = 0;
-  int zero = 0;
-  for (int i = 0; i < n; i++) {
-    int x;
-    cin >> x;
-    if (x > 0) {
-      positive++;
-    } else if (x < 0) {
-      negative++;
-    } else {
-      zero++;
+ int n = arr.size();
+    int positiveCount = 0, negativeCount = 0, zeroCount = 0;
+
+    for (int num : arr) {
+        if (num > 0) {
+            positiveCount++;
+        } else if (num < 0) {
+            negativeCount++;
+        } else {
+            zeroCount++;
+        }
     }
-  }
-  double positive_ratio = (double)positive / n;
-  double negative_ratio = (double)negative / n;
-  double zero_ratio = (double)zero / n;
-  cout << fixed<< positive_ratio << endl;
-  cout << fixed<< negative_ratio << endl;
-  cout << fixed<< zero_ratio << endl;
+
+    double positiveRatio = static_cast<double>(positiveCount) / n;
+    double negativeRatio = static_cast<double>(negativeCount) / n;
+    double zeroRatio = static_cast<double>(zeroCount) / n;
+
+    cout << fixed << setprecision(6) << positiveRatio << endl;
+    cout << fixed << setprecision(6) << negativeRatio << endl;
+    cout << fixed << setprecision(6) << zeroRatio << endl;
+}
