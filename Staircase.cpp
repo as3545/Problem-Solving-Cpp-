@@ -56,8 +56,8 @@ The staircase is right-aligned, composed of # symbols and spaces, and has a heig
 
 //Code
 void staircase(int n) {
-    for(int i=1;i<=6;i++){
-        for(int j=6; j>i;j--){
+    for(int i=1;i<=n;i++){
+        for(int j=n; j>i;j--){
             cout<<" ";
         } for(int k=1;k<=i;k++){
             cout<<"#";
